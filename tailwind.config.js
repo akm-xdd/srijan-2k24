@@ -10,7 +10,10 @@ export default {
           'forest':'#228B22',
           'mint':'#F4FFF8',
           'english':'#4C3B4D',
-        }
+        },
+        fontFamily: {
+          'dreamland': 'Dreamland',
+        },
     },
   },
   plugins: [],
