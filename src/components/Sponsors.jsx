@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sponsors.css';
 import logo1 from '../assets/logos/1.svg';
 import logo2 from '../assets/logos/2.svg';
@@ -9,28 +9,34 @@ import logo6 from '../assets/logos/6.svg';
 import logo7 from '../assets/logos/7.svg';
 
 export default function Sponsors() {
-  const scrollers = document.querySelectorAll(".scroller");
+  const [animationSetUp, setAnimationSetUp] = useState(false);
 
-  // If a user hasn't opted in for recuded motion, then we add the animation
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-  }
+  useEffect(() => {
+    if (!animationSetUp) {
+      const scrollers = document.querySelectorAll(".scroller");
 
-  function addAnimation() {
-    scrollers.forEach((scroller) => {
+      // If a user hasn't opted in for reduced motion, then we add the animation
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+        setAnimationSetUp(true); // Set animation setup flag to true once done
+      }
 
-      scroller.setAttribute("data-animated", true);
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          scroller.setAttribute("data-animated", true);
 
-      const scrollerInner = scroller.querySelector(".scroller__inner");
-      const scrollerContent = Array.from(scrollerInner.children);
+          const scrollerInner = scroller.querySelector(".scroller__inner");
+          const scrollerContent = Array.from(scrollerInner.children);
 
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.appendChild(duplicatedItem);
-      });
-    });
-  }
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        });
+      }
+    }
+  }, [animationSetUp]); // Only run the effect when animationSetUp changes
 
   return (
     <>
