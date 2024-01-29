@@ -40,7 +40,7 @@ export default function Sponsors() {
 
   return (
     <>
-      <div className="scroller" data-direction="left" data-speed="fast">
+      <div className="scroller" data-direction="left" data-speed="slow">
         <div className="scroller__inner">
           <img src={logo1} alt='logo1' />
           <img src={logo2} alt='logo2' />
