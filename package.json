@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://akm-xdd.github.io/srijan-2k24",
   "scripts": {
     "deploy" : "gh-pages -d build", 
     "dev": "vite",
