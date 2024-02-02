@@ -1,0 +1,34 @@
+.count-down {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.count-down > span {
+    line-height: 30px;
+}
+
+@media (min-width: 640px) {
+    .count-down > span {
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .count-down > span {
+        line-height: 50px;
+    }
+}
+
+@media (min-width:1024px) {
+    .count-down > span {
+        line-height: 55px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .count-down > span {
+        line-height: 75px;
+    }
+}

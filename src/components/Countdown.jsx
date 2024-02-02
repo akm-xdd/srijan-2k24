@@ -40,11 +40,11 @@ export default function Countdown({targetDate}) {
 
     return (
         <div className=''>
-            <div className="text-4xl font-bold text-center pt-4 mt-1">
-                <span className='xl:text-[80px] lg:text-[65px] md:text-[50px] sm:text-[35px] text-[25px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{days} days </span> 
-                <span className='xl:text-[80px] lg:text-[65px] md:text-[50px] sm:text-[35px] text-[25px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{hours.toString().padStart(2, '0')} hours </span> 
-                <span className='xl:text-[80px] lg:text-[65px] md:text-[50px] sm:text-[35px] text-[25px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{minutes.toString().padStart(2, '0')} mins </span> 
-                <span className='xl:text-[80px] lg:text-[65px] md:text-[50px] sm:text-[35px] text-[25px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{seconds.toString().padStart(2, '0')} secs </span>
+            <div className="count-down font-bold text-center pt-4 mt-1" >
+                <span className='xl:text-[55px] lg:text-[40px] md:text-[50px] sm:text-[35px] text-[35px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{days} days </span> 
+                <span className='xl:text-[55px] lg:text-[40px] md:text-[50px] sm:text-[35px] text-[35px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{hours.toString().padStart(2, '0')} hours </span> 
+                <span className='xl:text-[55px] lg:text-[40px] md:text-[50px] sm:text-[35px] text-[35px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{minutes.toString().padStart(2, '0')} mins </span> 
+                <span className='xl:text-[55px] lg:text-[40px] md:text-[50px] sm:text-[35px] text-[35px]  bg-clip-text text-transparent bg-gradient-to-r from-[#ff6ead] to-[#4599ff] '>{seconds.toString().padStart(2, '0')} secs </span>
             </div>
 
         </div>
