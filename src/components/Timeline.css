@@ -1,0 +1,8 @@
+.day-card {
+    @apply w-fit relative scale-105;
+}
+
+.day-card > .updown {
+    @apply flex flex-row;
+    gap: 50px;
+}
