@@ -3,7 +3,7 @@ import "./Timeline.css";
 
 function Timeline(props) {
     return (
-        <div className="flex flex-col items-center justify-center h-fit pb-[80px] bg-gradient-to-b from-transparent to-primary pt-10 bg-mint" style={{ backgroundColor: "#99ffcc" }}>
+        <div className="timeline flex flex-col items-center justify-center h-fit pb-[80px] pt-10">
             <h1 className="text-[2.7rem] leading-10 text-center md:text-[4rem] text-english font-clash font-bold tracking-wider">
             TIMELINE
           </h1>
