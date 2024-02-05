@@ -10,11 +10,11 @@ function Header(props) {
     }
 
     const navLinks = [
-        { name: 'Home', link: 'javascript:void(0)' },
-        { name: 'Events', link: 'javascript:void(0)' },
-        { name: 'Sponsors', link: 'javascript:void(0)' },
-        { name: 'About', link: 'javascript:void(0)' },
-        { name: 'Team', link: 'javascript:void(0)' }
+        { name: 'Home', link: '/' },
+        { name: 'Events', link: '/events' },
+        { name: 'Sponsors', link: '/sponsors' },
+        { name: 'About', link: '/about' },
+        { name: 'Team', link: '/team' }
     ]
 
     return (
@@ -31,9 +31,9 @@ function Header(props) {
                             {toggle ? 'close' : 'menu'}
                         </span>
                         <ul>
-                            {navLinks.map(link => {
+                            {navLinks.map((link, index) => {
                                 return (
-                                    <li><a href={link.link}>{link.name}</a></li>
+                                    <li key={index}><a href={link.link}>{link.name}</a></li>
                                 )
                             })
                             }
@@ -43,9 +43,9 @@ function Header(props) {
                 <div className={`header-nav`}>
                     <ul>
                         <li className="divider" />
-                        {navLinks.map(link => {
+                        {navLinks.map((link, index) => {
                             return (
-                                <li><a href={link.link}>{link.name}</a></li>
+                                <li key={index}><a href={link.link}>{link.name}</a></li>
                             )
                         })
                         }
