@@ -1,18 +1,20 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MysteryArtist from "./components/MysteryArtist";
-import Sponsors from "./components/Sponsors";
-import Timeline from "./components/Timeline";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
 
 export default function App(){
     return(
-        <>
-        <Header/>
-        <Hero/>
-        <MysteryArtist/>
-        <Timeline/>
-        <Sponsors/>
-        </>
+        <BrowserRouter>
+      <Routes>
+        {/* <Route path="/" element={<Layout />}> */}
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="events" element={<Events />} />
+          {/* <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
     )
 }
 
