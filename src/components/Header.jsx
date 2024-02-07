@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import './Header.css';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
 function Header(props) {
 
@@ -25,7 +25,7 @@ function Header(props) {
 
                 <div className="header-bar">
                     <div className="header-logo">
-                        <img src={logo} alt="logo" />
+                        <img src={'/logo.png'} alt="logo" />
                     </div>
                     <nav>
                         <span className="material-symbols-outlined menu-toggle" onClick={toggleNav}>
