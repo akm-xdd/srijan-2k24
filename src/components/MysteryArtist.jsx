@@ -20,7 +20,7 @@ function MysteryArtist(props) {
                     <p><a href="#" className="btn btn-secondary">Learn more</a></p>
                 </div>
                 <div className="p-6 col-lg-5 offset-lg-1">
-                    <img src="mystery_artist.svg" className="img img-fluid mx-auto" alt="" data-shape="web_editor/geometric/geo_square_2" data-original-mimetype="image/jpeg" data-file-name="s_text_image.svg" data-shape-colors=";;;;" loading="lazy" />
+                    <img src="/assets/mystery_artist.svg" className="img img-fluid mx-auto" alt="" data-shape="web_editor/geometric/geo_square_2" data-original-mimetype="image/jpeg" data-file-name="s_text_image.svg" data-shape-colors=";;;;" loading="lazy" />
                 </div>
             </div>
         </div>

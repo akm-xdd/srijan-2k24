@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Sponsors.css';
-// import logo1 from '../assets/logos/1.svg';
-// import logo2 from '../assets/logos/2.svg';
-// import logo3 from '../assets/logos/3.svg';
-// import logo4 from '../assets/logos/4.svg';
-// import logo5 from '../assets/logos/5.svg';
-// import logo6 from '../assets/logos/6.svg';
-// import logo7 from '../assets/logos/7.svg';
+// import logo1 from '../assets/assets/logos/1.svg';
+// import logo2 from '../assets/assets/logos/2.svg';
+// import logo3 from '../assets/assets/logos/3.svg';
+// import logo4 from '../assets/assets/logos/4.svg';
+// import logo5 from '../assets/assets/logos/5.svg';
+// import logo6 from '../assets/assets/logos/6.svg';
+// import logo7 from '../assets/assets/logos/7.svg';
 
 export default function Sponsors() {
   const [animationSetUp, setAnimationSetUp] = useState(false);
@@ -42,13 +42,13 @@ export default function Sponsors() {
     <>
       <div className="scroller" data-direction="left" data-speed="slow">
         <div className="scroller__inner">
-          <img src={'/logos/1.svg'} alt='logo1' />
-          <img src={'/logos/2.svg'} alt='logo2' />
-          <img src={'/logos/3.svg'} alt='logo3' />
-          <img src={'/logos/4.svg'} alt='logo4' />
-          <img src={'/logos/5.svg'} alt='logo5' />
-          <img src={'/logos/6.svg'} alt='logo6' />
-          <img src={'/logos/7.svg'} alt='logo7' />
+          <img src={'/assets/logos/1.svg'} alt='logo1' />
+          <img src={'/assets/logos/2.svg'} alt='logo2' />
+          <img src={'/assets/logos/3.svg'} alt='logo3' />
+          <img src={'/assets/logos/4.svg'} alt='logo4' />
+          <img src={'/assets/logos/5.svg'} alt='logo5' />
+          <img src={'/assets/logos/6.svg'} alt='logo6' />
+          <img src={'/assets/logos/7.svg'} alt='logo7' />
         </div>
       </div>
     </>

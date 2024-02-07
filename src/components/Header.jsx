@@ -25,7 +25,7 @@ function Header(props) {
 
                 <div className="header-bar">
                     <div className="header-logo">
-                        <img src={'/logo.png'} alt="logo" />
+                        <img src={'/assets/logo.png'} alt="logo" />
                     </div>
                     <nav>
                         <span className="material-symbols-outlined menu-toggle" onClick={toggleNav}>

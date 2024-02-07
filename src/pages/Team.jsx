@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaInstagram, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
 import Header from "../components/Header";
 
 function Team(props) {
@@ -23,7 +23,7 @@ function Team(props) {
                             "id": "2",
                             "name": "Naved",
                             "post": "Joint Secretary",
-                            "img": "https://instagram.fpat3-1.fna.fbcdn.net/v/t51.2885-19/363766384_1284481645568172_8653948836160816345_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fpat3-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=RrJNiS1UhXYAX_3EylE&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfArhiB18Ki-JRzfny4AxvkqDlDe2EY0B_1j2N4Yf_HDrg&oe=65C92E5C&_nc_sid=8b3546",
+                            "img": "/assets/teams/naved.jpg",
                             "insta": "https://www.instagram.com/_draco_sycon"
                         },
                         {
@@ -32,7 +32,7 @@ function Team(props) {
                             "post": "Social Media Coordinator",
                             "img": "https://media.licdn.com/dms/image/C4D03AQEOVR8rrEJW3Q/profile-displayphoto-shrink_400_400/0/1667929840317?e=1712793600&v=beta&t=YZNInmsNl_AI_IhOIdNLRRrmWzaGHYU3Oy5YbuWz0bg",
                             "insta": "https://www.instagram.com/theog_aseem_parashar",
-                            "linkedin": "https://www.linkedin.com/in/aseem-parashar-214181255"
+                            "linkedin": "https://www.linkedin.com/in/aseem-parashar-214181255",
                         }
                     ]
                 }
@@ -48,7 +48,7 @@ function Team(props) {
                             "id": "d1",
                             "name": "Shreyansh",
                             "post": "Design Lead Coordinator",
-                            "img": "",
+                            "img": "/assets/teams/shreyansh.jpg",
                             "insta": "https://www.instagram.com/sypher.in"
                         }
                     ]
@@ -65,10 +65,11 @@ function Team(props) {
                             "id": "edwin",
                             "name": "Chiranjit",
                             "post": "Lead Developer",
-                            "img": "https://scontent.fpat3-2.fna.fbcdn.net/v/t39.30808-1/415963231_2068391526829960_7111095191123791697_n.jpg?stp=dst-jpg_s320x320&_nc_cat=107&ccb=1-7&_nc_sid=5740b7&_nc_ohc=UMhUFFUMnJMAX_dHxrv&_nc_ht=scontent.fpat3-2.fna&oh=00_AfCLGuKAWTLZD_6fnjHwZhwKmfYAE9Ku7z-Ci4AHPDPwJQ&oe=65C825AE",
+                            "img": "/assets/teams/chiranjit.jpeg",//"https://scontent.fpat3-2.fna.fbcdn.net/v/t39.30808-1/415963231_2068391526829960_7111095191123791697_n.jpg?stp=dst-jpg_s320x320&_nc_cat=107&ccb=1-7&_nc_sid=5740b7&_nc_ohc=UMhUFFUMnJMAX_dHxrv&_nc_ht=scontent.fpat3-2.fna&oh=00_AfCLGuKAWTLZD_6fnjHwZhwKmfYAE9Ku7z-Ci4AHPDPwJQ&oe=65C825AE",
                             "insta": "https://www.linkedin.com/im.chiranjit",
                             "linkedin": "https://www.linkedin.com/in/imchiranjit",
-                            "github": "https://github.com/imchiranjit"
+                            "github": "https://github.com/imchiranjit",
+                            "website": "https://chiranjit.web.app"
                         },
                         {
                             "id": "gladson",
@@ -77,7 +78,8 @@ function Team(props) {
                             "img": "https://avatars.githubusercontent.com/u/110248822?v=4",
                             "insta": "https://www.instagram.com/akm.xdd",
                             "linkedin": "https://www.linkedin.com/in/akm-glhf",
-                            "github": "https://github.com/akm-xdd"
+                            "github": "https://github.com/akm-xdd",
+                            "website": "https://akm-xdd.tech"
                         }
                     ]
                 }
@@ -91,7 +93,7 @@ function Team(props) {
             <div className="h-fit w-full bg-soothing_black">
 
                 <main>
-                    <div className='h-[15rem] z-20 md:h-[20rem] bg-[url("/banner.png")] object-fill text-white font-dreamland tracking-wide font-black flex flex-col items-center justify-center'>
+                    <div className='h-[15rem] z-20 md:h-[20rem] bg-[url("/assets/banner.png")] object-fill text-white font-dreamland tracking-wide font-black flex flex-col items-center justify-center'>
                         <span className="text-[4rem] pt-12 md:pt-16 md:text-[6rem]">
                             SRIJAN '24
                         </span>
@@ -134,7 +136,7 @@ function Team(props) {
                                                         className="object-cover w-[20rem] h-[22rem]"
                                                     />
                                                 </div>
-                                                <div className="flex flex-col p-2 bg-black bg-opacity-20 ">
+                                                <div className="flex flex-col px-6 py-2 bg-black bg-opacity-20 ">
                                                     <div>
                                                         <h1 className=" text-white font-chakra font-semibold text-[1.5rem] pt-4">
                                                             {member.name}
@@ -145,15 +147,27 @@ function Team(props) {
                                                     </div>
                                                     <div className="flex justify-end pb-2">
                                                         <div
-                                                            className={
-                                                                member.github
-                                                                    ? "flex justify-between w-20"
-                                                                    : "flex justify-end"
-                                                            }
+                                                            className={"flex justify-between gap-2"}
                                                         >
+                                                            {member.website && (
+                                                                <a href={`${member.website}`} className="">
+                                                                    <FaGlobe
+                                                                        size="2rem"
+                                                                        className="text-white hover:text-main_primary transition-all duration-500 ease-in-out"
+                                                                    />
+                                                                </a>
+                                                            )}
                                                             {member.github && (
                                                                 <a href={`${member.github}`} className="">
                                                                     <FaGithub
+                                                                        size="2rem"
+                                                                        className="text-white hover:text-main_primary transition-all duration-500 ease-in-out"
+                                                                    />
+                                                                </a>
+                                                            )}
+                                                            {member.linkedin && (
+                                                                <a href={`${member.linkedin}`} className="">
+                                                                    <FaLinkedin
                                                                         size="2rem"
                                                                         className="text-white hover:text-main_primary transition-all duration-500 ease-in-out"
                                                                     />
