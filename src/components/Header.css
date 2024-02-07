@@ -92,4 +92,9 @@ header.nav-active .header-nav {
         background-color: rgb(0 0 0 / 20%);
         box-shadow: 0 0 0.6rem #00000054;
     }
+
+    header > .header-container {
+        padding: 1rem 2rem;
+    }
 }
+
