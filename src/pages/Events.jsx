@@ -71,7 +71,7 @@ function Events(props) {
                             <div className="backdrop bg-gray-200 absolute left-0 right-0 top-0 bottom-0 z-[-1]">
                                 <video src={Background} autoPlay loop muted className="w-full h-full object-cover brightness-[20%]" />
                             </div>
-                            <h1 className='font-dreamland xl:text-[200px] lg:text-[150px] md:text-[100px] sm:text-[75px] text-[75px] text-center text-white'>{day.title}</h1>
+                            <h1 className='font-dreamland xl:text-[240px] lg:text-[180px] md:text-[160px] sm:text-[120px] text-[120px] text-center text-white'>{day.title}</h1>
                             <p className='text-main_primary text-center font-black text-[0.8rem]'>Scroll Down</p>
                         </div>
 
