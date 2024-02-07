@@ -8,7 +8,7 @@ function Timeline(props) {
             <h1 className="text-[2.7rem] leading-10 text-center md:text-[4rem] text-english font-clash font-bold tracking-wider">
             TIMELINE
           </h1>
-            <div className="flex flex-wrap gap-8 md:gap-16 lg:gap-40 pt-10 items-center justify-center px-10 mt-10 flex-row relative">
+            <div className="flex flex-wrap gap-12 md:gap-20 lg:gap-32 pt-10 items-center justify-center px-10 mt-10 flex-row relative">
 
                 {/* <div style={{
                     height: "90%",

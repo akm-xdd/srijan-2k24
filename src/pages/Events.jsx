@@ -76,7 +76,7 @@ function Events(props) {
                         </div>
 
                         <div className="timeline flex flex-col items-center justify-center h-fit pb-[80px] pt-10 bg-[#263238]">
-                            <div className="flex flex-wrap gap-8 md:gap-16 lg:gap-40 pt-10 items-center justify-center px-10 mt-10 flex-row relative max-w-[1024px]">
+                            <div className="flex flex-wrap gap-12 md:gap-20 lg:gap-32 pt-10 items-center justify-center px-10 mt-10 flex-row relative max-w-[1024px]">
                                 {day.events.map((event, index) => {
                                     return (
                                         <>
