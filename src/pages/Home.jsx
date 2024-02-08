@@ -12,8 +12,8 @@ function Home(props) {
         <Header/>
         <Hero/>
         <MysteryArtist/>
-        <Timeline/>
         <Sponsors/>
+        <Timeline/>
         <Footer/>
         </>
     );
