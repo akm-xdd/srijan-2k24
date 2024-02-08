@@ -57,7 +57,7 @@ function Team(props) {
       ],
     },
     {
-      name: "Web Team",
+      name: "Tech Team",
       sections: [
         {
           name: "Developers",
@@ -104,7 +104,7 @@ function Team(props) {
             {tabs.map((tab, i) => (
               <span
                 key={i}
-                className="rounded-full px-4 py-[.3rem] hover:bg-white/20 transition-all duration-500 ease-in-out cursor-pointer"
+                className="rounded-full px-4 py-[.3rem] text-center hover:bg-white/20 transition-all duration-500 ease-in-out cursor-pointer"
                 style={{
                   border:
                     index === i
