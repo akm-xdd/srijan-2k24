@@ -3,6 +3,7 @@ import Header from '../components/Header';
 
 // import Background from '../assets/Background.mp4';
 import EventCard from '../components/EventCard';
+import Footer from '../components/Footer';
 
 function Events(props) {
 
@@ -91,6 +92,7 @@ function Events(props) {
                 )
 
             })}
+            <Footer />
         </>
     );
 }

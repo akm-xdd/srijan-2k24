@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import MysteryArtist from '../components/MysteryArtist';
 import Timeline from '../components/Timeline';
 import Sponsors from '../components/Sponsors';
+import Footer from '../components/Footer';
 
 function Home(props) {
     return (
@@ -13,6 +14,7 @@ function Home(props) {
         <MysteryArtist/>
         <Timeline/>
         <Sponsors/>
+        <Footer/>
         </>
     );
 }

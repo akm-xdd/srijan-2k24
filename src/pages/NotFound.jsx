@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer';
 
 function NotFound(props) {
     return (
@@ -18,6 +19,7 @@ function NotFound(props) {
                     Go back
                 </a>
             </div>
+        <Footer />
         </div>
     );
 }
