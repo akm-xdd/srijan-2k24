@@ -1,6 +1,8 @@
 
+
+  
   .scroller__inner {
-    padding-block: 1rem;
+    /* padding-block: 1rem; */
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -48,9 +50,9 @@
   }
   
 .scroller__inner img {
-    width: 200px;
-    height: 200px;
-    padding: 1rem;
+    width: 180px;
+    height: 180px;
+    padding: 0 1rem;
 }
-  
+
   

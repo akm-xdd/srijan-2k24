@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './Sponsors.css';
+import React, { useEffect, useState } from "react";
+import "./Sponsors.css";
 // import logo1 from '../assets/assets/logos/1.svg';
 // import logo2 from '../assets/assets/logos/2.svg';
 // import logo3 from '../assets/assets/logos/3.svg';
@@ -40,15 +40,18 @@ export default function Sponsors() {
 
   return (
     <>
-      <div className="scroller" data-direction="left" data-speed="slow">
-        <div className="scroller__inner">
-          <img src={'/assets/logos/1.svg'} alt='logo1' />
-          <img src={'/assets/logos/2.svg'} alt='logo2' />
-          <img src={'/assets/logos/3.svg'} alt='logo3' />
-          <img src={'/assets/logos/4.svg'} alt='logo4' />
-          <img src={'/assets/logos/5.svg'} alt='logo5' />
-          <img src={'/assets/logos/6.svg'} alt='logo6' />
-          <img src={'/assets/logos/7.svg'} alt='logo7' />
+      <div className="bg-gray-900">
+        <h1 className="xl:text-[55px] lg:text-[50px] md:text-[40px] sm:text-[35px] text-[35px] text-center uppercase font-bold ">Our Sponsors</h1>
+        <div className="scroller" data-direction="left" data-speed="slow">
+          <div className="scroller__inner">
+            <img src={"/assets/logos/1.svg"} alt="logo1" />
+            <img src={"/assets/logos/2.svg"} alt="logo2" />
+            <img src={"/assets/logos/3.svg"} alt="logo3" />
+            <img src={"/assets/logos/4.svg"} alt="logo4" />
+            <img src={"/assets/logos/5.svg"} alt="logo5" />
+            <img src={"/assets/logos/6.svg"} alt="logo6" />
+            <img src={"/assets/logos/7.svg"} alt="logo7" />
+          </div>
         </div>
       </div>
     </>
