@@ -137,8 +137,8 @@ function Team(props) {
                     }
                     {
                         !data.loaded && (
-                            <div className="h-[100vh] w-full flex items-center justify-center">
-                                <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+                            <div className="flex justify-center items-center h-[75vh]">
+                                <div className="animate-spin rounded-full h-32 w-32 border-b-4 border-[#7cb342]"></div>
                             </div>
                         )
                     }
