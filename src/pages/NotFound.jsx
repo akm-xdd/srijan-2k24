@@ -19,7 +19,9 @@ function NotFound(props) {
                     Go back
                 </a>
             </div>
-        <Footer />
+            <div className="fixed left-0 right-0 bottom-0 h-[40px]">
+                <Footer />
+            </div>
         </div>
     );
 }

@@ -6,7 +6,7 @@ function Timeline(props) {
     return (
         <div className="timeline flex flex-col items-center justify-center h-fit pb-[80px] pt-10">
             <h1 className="text-[2.7rem] leading-10 text-center md:text-[4rem] text-english font-clash font-bold tracking-wider">
-            TIMELINE
+            EVENTS
           </h1>
             <div className="flex flex-wrap gap-12 md:gap-20 lg:gap-32 pt-10 items-center justify-center px-10 mt-10 flex-row relative">
 
@@ -18,8 +18,8 @@ function Timeline(props) {
                     borderRadius: "25px"
                 }} /> */}
 
-                <EventCard title="Day 1" img="https://www.darpan23.live/_next/image?url=%2Fchef.jpg&w=1080&q=100" />
-                <EventCard title="Day 2" img="https://www.darpan23.live/_next/image?url=%2Ftalk-2.png&w=828&q=100" />
+                <EventCard title="Zami-Parasti" img="/assets/events/zami-parasti.jpg" />
+                <EventCard title="Yogasana" img="/assets/events/yogasana.jpg" />
 
             </div>
         </div>

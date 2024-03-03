@@ -2,7 +2,7 @@
 import Countdown from './Countdown';
 // import Logo from '../assets/Logo.png';
 import "./Hero.css";
-const eventDate = new Date('2024-02-29');
+const eventDate = new Date('2024-03-08');
 
 export default function Hero() {
   return (

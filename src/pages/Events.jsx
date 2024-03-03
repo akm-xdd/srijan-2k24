@@ -11,12 +11,12 @@ function Events(props) {
       title: "Check out our events",
       events: [
         {
-          title: "Cheif Guest",
-          img: "https://www.darpan23.live/_next/image?url=%2Fchef.jpg&w=1080&q=100",
+          title: "Zami-Parasti",
+          img: "/assets/events/zami-parasti.jpg",
         },
         {
-          title: "Talk Show",
-          img: "https://www.darpan23.live/_next/image?url=%2Ftalk-2.png&w=828&q=100",
+          title: "Yogasana",
+          img: "/assets/events/yogasana.jpg",
         },
         {
           title: "Spire Talk",
