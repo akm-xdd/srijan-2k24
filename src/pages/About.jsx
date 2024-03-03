@@ -39,7 +39,7 @@ function About(props) {
         </div>
         <div className="absolute font-clash font-bold text-white">
           <span className="flex gap-6 text-[3.3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem]">
-            About <a href={"https://bcas1.du.ac.in/"}>BCAS</a>{" "}
+            About <a href={"https://bcasdu.in/"}>BCAS</a>{" "}
           </span>
         </div>
         <div

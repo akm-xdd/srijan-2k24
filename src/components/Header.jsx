@@ -12,7 +12,6 @@ function Header(props) {
 
     const navLinks = [
         { name: 'Home', link: '/' },
-        { name: 'Sponsors', link: '/sponsors' },
         { name: 'About', link: '/about' },
         { name: 'Team', link: '/team' }
     ]
