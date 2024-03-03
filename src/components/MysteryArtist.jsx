@@ -15,9 +15,8 @@ function MysteryArtist(props) {
                         <br />
                     </p>
                     <p>
-                        Welcome to our online home. We invite you to explore our services and discover how we can help you plan your next college event.
+                        Watch the mystery artist perform live at <span className='font-dreamland'>Srijan '24.</span> The artist will be revealed soon. Stay tuned for more updates.
                     </p>
-                    <p><a href="#" className="btn btn-secondary">Learn more</a></p>
                 </div>
                 <div className="p-6 col-lg-5 offset-lg-1">
                     <img src="/assets/mystery_artist.svg" className="img img-fluid mx-auto" alt="" data-shape="web_editor/geometric/geo_square_2" data-original-mimetype="image/jpeg" data-file-name="s_text_image.svg" data-shape-colors=";;;;" loading="lazy" />
