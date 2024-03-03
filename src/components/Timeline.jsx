@@ -2,6 +2,19 @@ import React from 'react';
 import "./Timeline.css";
 import EventCard from './EventCard';
 
+const events = [
+    {
+        title: "Zami-Parasti",
+        img: "/assets/events/zami-parasti.jpg",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSfCIahMt7vGDrS8fNVsHxh7wooTDxBvrQzmoaok6rBrIrbbKw/viewform?pli=1"
+    }, 
+    {
+        title: "Yogasana",
+        img: "/assets/events/yogasana.jpg",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSfCIahMt7vGDrS8fNVsHxh7wooTDxBvrQzmoaok6rBrIrbbKw/viewform?pli=1"
+    }
+]
+
 function Timeline(props) {
     return (
         <div className="timeline flex flex-col items-center justify-center h-fit pb-[80px] pt-10">
@@ -17,9 +30,12 @@ function Timeline(props) {
                     backgroundColor: "white",
                     borderRadius: "25px"
                 }} /> */}
-
-                <EventCard title="Zami-Parasti" img="/assets/events/zami-parasti.jpg" />
-                <EventCard title="Yogasana" img="/assets/events/yogasana.jpg" />
+                
+                {events.map((event, index) => (
+                    <a href={event.link} key={index}>
+                    <EventCard title={event.title} img={event.img}  />
+                    </a>
+                ))}
 
             </div>
         </div>
