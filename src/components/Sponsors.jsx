@@ -43,7 +43,7 @@ export default function Sponsors() {
       <div className="bg-gray-900">
         <h1 className="xl:text-[55px] lg:text-[50px] md:text-[40px] sm:text-[35px] text-[35px] text-center uppercase font-bold ">Our Sponsors</h1>
         <div className="scroller" data-direction="left" data-speed="slow">
-          <div className="scroller__inner">
+          <div className="scroller__inner ">
             <img src={"/assets/logos/1.svg"} alt="logo1" />
             <img src={"/assets/logos/2.svg"} alt="logo2" />
             <img src={"/assets/logos/3.svg"} alt="logo3" />
