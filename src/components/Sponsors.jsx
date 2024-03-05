@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "./Sponsors.css";
-// import logo1 from '../assets/assets/logos/1.svg';
-// import logo2 from '../assets/assets/logos/2.svg';
-// import logo3 from '../assets/assets/logos/3.svg';
-// import logo4 from '../assets/assets/logos/4.svg';
-// import logo5 from '../assets/assets/logos/5.svg';
-// import logo6 from '../assets/assets/logos/6.svg';
-// import logo7 from '../assets/assets/logos/7.svg';
 
 export default function Sponsors() {
   const [animationSetUp, setAnimationSetUp] = useState(false);
 
+  const [data, setData] = useState({
+    partners: [],
+    loaded: false,
+  });
+
   useEffect(() => {
-    if (!animationSetUp) {
+    fetch(`https://storage.googleapis.com/srijan-2k24.appspot.com/partners.json?v=${Date.now()}`)
+      .then((res) => res.json())
+      .then((json) => {
+        setData({
+          partners: json,
+          loaded: true,
+        });
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!animationSetUp && data.loaded && data.partners.length > 0) {
       const scrollers = document.querySelectorAll(".scroller");
 
       // If a user hasn't opted in for reduced motion, then we add the animation
@@ -20,6 +29,10 @@ export default function Sponsors() {
         addAnimation();
         setAnimationSetUp(true); // Set animation setup flag to true once done
       }
+
+      function onclick(e) {
+        e.target.hasAttribute("link") && window.open(e.target.getAttribute("link"), "_blank");
+      };
 
       function addAnimation() {
         scrollers.forEach((scroller) => {
@@ -31,29 +44,47 @@ export default function Sponsors() {
           scrollerContent.forEach((item) => {
             const duplicatedItem = item.cloneNode(true);
             duplicatedItem.setAttribute("aria-hidden", true);
+            duplicatedItem.onclick = onclick;
+            item.onclick = onclick;
             scrollerInner.appendChild(duplicatedItem);
           });
         });
       }
     }
-  }, [animationSetUp]); // Only run the effect when animationSetUp changes
+  }, [animationSetUp, data]); // Only run the effect when animationSetUp changes
 
   return (
     <>
-      <div className="bg-gray-900">
-        <h1 className="xl:text-[55px] lg:text-[50px] md:text-[40px] sm:text-[35px] text-[35px] text-center uppercase font-bold ">Our Partners</h1>
-        <div className="scroller" data-direction="left" data-speed="slow">
-          <div className="scroller__inner ">
-            <img src={"/assets/logos/1.svg"} alt="logo1" />
-            <img src={"/assets/logos/2.svg"} alt="logo2" />
-            <img src={"/assets/logos/3.svg"} alt="logo3" />
-            <img src={"/assets/logos/4.svg"} alt="logo4" />
-            <img src={"/assets/logos/5.svg"} alt="logo5" />
-            <img src={"/assets/logos/6.svg"} alt="logo6" />
-            <img src={"/assets/logos/7.svg"} alt="logo7" />
+      {data.loaded && data.partners.length > 0 && (
+        <>
+          <div className="bg-gray-900">
+            <h1 className="xl:text-[55px] lg:text-[50px] md:text-[40px] sm:text-[30px] text-[30px] text-center uppercase font-bold ">Our Partners</h1>
+            <div className="scroller" data-direction="left" data-speed="slow">
+              <div className="scroller__inner ">
+                {
+                  data.partners.map((partner, index) => (
+                    <img
+                      src={partner.img}
+                      alt={partner.alt}
+                      key={index}
+                      link={partner.link}
+                      style={{
+                        width: partner.width ? 'auto' : '',
+                        height: partner.height ? 'auto' : '',
+                      }}
+                       />
+                  ))
+                }
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
+      {
+        (!data.loaded || data.partners.length == 0) && (
+          <div />
+        )
+      }
     </>
   );
 }
